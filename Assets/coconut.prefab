@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 457001297509677669}
   - component: {fileID: 7489729083913395030}
   - component: {fileID: 6646972539698492542}
+  - component: {fileID: -1613275890636117233}
   m_Layer: 0
   m_Name: coconut
   m_TagString: Bullet
@@ -121,3 +122,15 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
+--- !u!114 &-1613275890636117233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8338329941567225989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c163f086342eb7f4387dc6a102c30f66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
