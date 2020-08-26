@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 457001297509677669}
   - component: {fileID: 7489729083913395030}
   - component: {fileID: 6646972539698492542}
-  - component: {fileID: -1613275890636117233}
+  - component: {fileID: -3698008403788404941}
   m_Layer: 0
   m_Name: coconut
-  m_TagString: Bullet
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.105
---- !u!114 &-1613275890636117233
+--- !u!114 &-3698008403788404941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
