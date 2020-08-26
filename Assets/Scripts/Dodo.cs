@@ -2,22 +2,31 @@
 
 public class Dodo : MonoBehaviour
 {
-
     private void OnMouseDown()
     {
         GetComponent<SpriteRenderer>().color = Color.red;     
-        transform.Rotate(0,0,0);
     }
 
     private void OnMouseUp()
     {
         GetComponent<SpriteRenderer>().color = Color.white;
-        transform.Rotate(0,0,0);
     }
 
-    private void OnMouseDrag() {
+    private void OnMouseDrag() 
+    {
         Vector2 newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(newPosition.x,(float)-3.884643);
-        transform.Rotate(0,0,0);
+        newPosition.y = gameObject.transform.position.y;
+        transform.position = new Vector2(newPosition.x,newPosition.y);
+        //transform.rotation  = Quaternion.identity;
+    }
+    private void Update() {
+        transform.rotation = Quaternion.identity;
+        //gameObject.transform.position.y = 1;
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) {
+        if (other.gameObject.tag.Equals("BulletCollidable")) {
+            Debug.Log("i've hit the bird");
+        }
     }
 }

@@ -2,17 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health
 {
-    // Start is called before the first frame update
-    void Start()
+    
+    private int health;
+    private int maxHealth;
+
+    public Health(int health) 
     {
-        
+        this.health = health;
+        this.maxHealth = health;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public int GetHealth() {
+        return health;
+    }
+
+    public int GetMaxHealth() {
+        return maxHealth;
+    }
+
+    public void Damage(int amount) {
+        health -= amount;
     }
 }
