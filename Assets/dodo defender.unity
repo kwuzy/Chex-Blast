@@ -223,7 +223,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1167167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.22, y: -2.66, z: 0}
+  m_LocalPosition: {x: 1.22, y: -3.66, z: 0}
   m_LocalScale: {x: 2.8587775, y: 2.8587775, z: 2.8587775}
   m_Children:
   - {fileID: 1696729021}
@@ -473,7 +473,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 457439213}
-  mostDamaged: {fileID: 21300000, guid: b2f1d0e7441378b4883a4f803215c795, type: 3}
+  threeQuartersDamaged: {fileID: 21300000, guid: 31ee09092db05234bac0481cd5776615, type: 3}
+  halfDamaged: {fileID: 21300000, guid: cb19c1a26f7652546ab16f6b3cebc50a, type: 3}
+  quarterDamaged: {fileID: 21300000, guid: d96ce03716995024ea570bf8257748f7, type: 3}
 --- !u!1 &549927540
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,7 +855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849016651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.82, y: 10.06, z: -1.5024327}
+  m_LocalPosition: {x: -2.82, y: 5.21, z: -1.5024327}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

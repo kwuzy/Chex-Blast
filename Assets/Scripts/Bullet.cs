@@ -8,10 +8,8 @@ public class Bullet : MonoBehaviour
     {
         if (col.gameObject.tag.Equals("BulletCollidable")) {
             Destroy(gameObject);
-            //Debug.Log(col.gameObject.GetComponent<MeteorHealth>().GetHealth());
             var meteor = col.gameObject.GetComponent<Meteor>();
             meteor.hp.Damage(1);
-            Debug.Log(meteor.hp.GetHealth());
         }
     }    
 }
