@@ -9,14 +9,14 @@ public class Shooting : MonoBehaviour
 
     public float coconutForce = 20f;
     
-    public float fireRate = (float)0.5;
+    public float fireRate = 10f;
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetButtonDown("Fire1"))
         {
-            InvokeRepeating("Shoot", (float)0.001, fireRate);
+            InvokeRepeating("Shoot", 0, fireRate);
         }
         else if (Input.GetButtonUp("Fire1"))
         {

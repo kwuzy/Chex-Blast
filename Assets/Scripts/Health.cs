@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Health
 {
@@ -14,11 +15,22 @@ public class Health
     {
         this.health = health;
         this.maxHealth = health;
-        this.healthQuartiles[0] = 5000;
+
+        var quarterHealth = (decimal)maxHealth / 4;
+        for (int i = 0; i < 3; i++)
+        {
+            this.healthQuartiles[i] = (int)Math.Ceiling(((decimal)i + 1) * quarterHealth);
+        }
+        if (healthQuartiles[2] == maxHealth) 
+        {
+            this.healthQuartiles[2] -= 1;
+        }
+        
     }
 
-    public int GetHealth() {
-        return health;
+    public int CurrentHealth {
+        get {return health;}
+        set {health = value;}
     }
 
     public int GetMaxHealth() {

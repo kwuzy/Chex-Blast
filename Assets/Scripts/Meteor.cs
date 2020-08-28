@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class Meteor : MonoBehaviour
 {
@@ -10,35 +11,39 @@ public class Meteor : MonoBehaviour
     public Sprite threeQuartersDamaged;
     public Sprite halfDamaged;
     public Sprite quarterDamaged;
+    public TextMeshProUGUI healthTextComponent;
+    public Canvas healthCanvas;
     
     // Start is called before the first frame update
     void Start()
     {
-        hp = new Health(10);
-        Debug.Log("this quartile: " + hp.GetHealthQuartiles());
+        hp = new Health(20);
     }
     void Update() {
-        var currentHP = hp.GetHealth();
-        var quarterHealth = (int)Math.Ceiling((decimal)hp.GetMaxHealth()) / 4;
-        var halfHealth = (int)Math.Ceiling((decimal)hp.GetMaxHealth()) / 2;
-        var threeQuartersHealth = (int)Math.Ceiling((decimal)hp.GetMaxHealth()) * 3 / 4;
+        var quarterHealth = hp.GetHealthQuartiles()[0];
+        var halfHealth = hp.GetHealthQuartiles()[1];
+        var threeQuartersHealth = hp.GetHealthQuartiles()[2];
 
         //meteor damanged, shows damage, and gets destroyed
-        if (currentHP <= 0 ){
+        if (hp.CurrentHealth <= 0 ){
             Destroy(gameObject);
         }
-        else if(currentHP <= quarterHealth)
+        else if(hp.CurrentHealth <= quarterHealth)
         {
             ChangeSprite(threeQuartersDamaged);
         }
-        else if (currentHP <= halfHealth)
+        else if (hp.CurrentHealth <= halfHealth)
         {
             ChangeSprite(halfDamaged);
         }
-        else if (currentHP <= threeQuartersHealth)
+        else if (hp.CurrentHealth <= threeQuartersHealth)
         {
             ChangeSprite(quarterDamaged);
         }
+
+        //display the health as a number over the meteor and keep it stable
+        healthCanvas.transform.rotation = Quaternion.Euler(0, 0, 0);
+        healthTextComponent.text = hp.CurrentHealth.ToString();
     }
 
     void ChangeSprite(Sprite newSprite) {
