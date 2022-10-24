@@ -674,7 +674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1239063109}
   - component: {fileID: 1239063111}
-  - component: {fileID: 1239063110}
+  - component: {fileID: 1239063112}
   m_Layer: 0
   m_Name: sides
   m_TagString: Untagged
@@ -696,32 +696,6 @@ Transform:
   m_Father: {fileID: 549927542}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!68 &1239063110
-EdgeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239063108}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_EdgeRadius: 0
-  m_Points:
-  - {x: -12.557583, y: 10.9571495}
-  - {x: -3.7642133, y: 6.6920424}
-  - {x: -1.840718, y: -5.8967366}
-  - {x: 7.3717923, y: -5.9866834}
-  - {x: 9.01263, y: 6.763537}
-  - {x: 19.159046, y: 10.9815855}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!212 &1239063111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -773,6 +747,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!68 &1239063112
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239063108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.840718, y: 6.9662848}
+  - {x: -1.840718, y: -5.8967366}
+  - {x: 7.3717923, y: -5.9866834}
+  - {x: 7.371792, y: 6.5081563}
+  - {x: -1.840718, y: 6.508156}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!1 &1696729020
 GameObject:
   m_ObjectHideFlags: 0
@@ -963,7 +962,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1849016651}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5414655, y: 9.402666, z: -1.7685119}
+  m_LocalPosition: {x: -0.5414655, y: 6.62, z: 0}
   m_LocalScale: {x: 1.1770989, y: 1.1770989, z: 1.1770989}
   m_Children:
   - {fileID: 66265221}
